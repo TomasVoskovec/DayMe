@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayMe.Android", "DayMe.Andr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayMe.iOS", "DayMe.iOS\DayMe.iOS.csproj", "{4A900A5C-936F-4464-B0EF-6F8278307437}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayMe", "DayMe\DayMe.csproj", "{405FBF6B-DE4D-41C5-8CDF-8BD9EDA9813D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayMe", "DayMe\DayMe.csproj", "{405FBF6B-DE4D-41C5-8CDF-8BD9EDA9813D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
