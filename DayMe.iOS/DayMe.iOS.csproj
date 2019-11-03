@@ -130,4 +130,22 @@
       <Name>DayMe</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\login_gradient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dayme_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\google.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\login_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\login_button.png" />
+  </ItemGroup>
 </Project>
