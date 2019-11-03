@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:custom="clr-namespace:DayMe"
+             xmlns:CustomEntry="clr-namespace:Plugin.RoundedBorderControls;assembly=Plugin.RoundedBorderControls"
+             mc:Ignorable="d"
+             x:Class="DayMe.Views.LoginPage" BackgroundImageSource="login_background.png">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="0" Grid.RowSpan="2" >
+                <Image Source="dayme_logo.png" HorizontalOptions="CenterAndExpand"  HeightRequest="140"></Image>
+                <Label Text="DAYME" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="25" TextColor="White"></Label>
+            </StackLayout>
+            <StackLayout VerticalOptions="Center"  x:Name="LoginEntry" Grid.Row="1" Grid.RowSpan="2" Margin="0,110,0,0">
+                <Entry FontSize="12" Placeholder="přihlašovací jméno" HorizontalOptions="CenterAndExpand" WidthRequest="290" HeightRequest="50" BackgroundColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center"></Entry>
+                <Entry FontSize="12" Placeholder="heslo" HorizontalOptions="CenterAndExpand" BackgroundColor="White" WidthRequest="290" HeightRequest="50"  VerticalOptions="Center" HorizontalTextAlignment="Center"></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="2" Grid.RowSpan="2">
+                <Button BackgroundColor="DeepPink" ImageSource="facebook.png" BorderRadius="15"  WidthRequest="70"   HeightRequest="50"  HorizontalOptions="Center"></Button>
+                <Button BackgroundColor="DeepPink" BorderRadius="15" TextColor="White" Text="Přihlásit" WidthRequest="150"   HeightRequest="50"  HorizontalOptions="Center" SetAllCaps="false"></Button>
+                <Button BackgroundColor="DeepPink" ImageSource="google.png" BorderRadius="15" WidthRequest="70"  HeightRequest="50" HorizontalOptions="Center"></Button>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
