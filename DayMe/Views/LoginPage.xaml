@@ -25,7 +25,7 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="2" Grid.RowSpan="2">
                 <Button BackgroundColor="DeepPink" ImageSource="facebook.png" BorderRadius="15"  WidthRequest="70"   HeightRequest="50"  HorizontalOptions="Center"></Button>
                 <Button BackgroundColor="DeepPink" BorderRadius="15" TextColor="White" Text="Přihlásit" WidthRequest="150"   HeightRequest="50"  HorizontalOptions="Center"></Button>
-                <Button BackgroundColor="DeepPink" ImageSource="google.png" BorderRadius="15" WidthRequest="70"  HeightRequest="50" HorizontalOptions="Center" AllCaps="false"></Button>
+                <Button BackgroundColor="DeepPink" ImageSource="google.png" BorderRadius="15" WidthRequest="70"  HeightRequest="50" HorizontalOptions="Center"></Button>
             </StackLayout>
         </Grid>
     </ContentPage.Content>
