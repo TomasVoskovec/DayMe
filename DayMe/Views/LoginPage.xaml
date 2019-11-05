@@ -14,18 +14,64 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+          
             <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="0" Grid.RowSpan="2" >
                 <Image Source="dayme_logo.png" HorizontalOptions="CenterAndExpand"  HeightRequest="140"></Image>
                 <Label Text="DAYME" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="25" TextColor="White"></Label>
             </StackLayout>
-            <StackLayout VerticalOptions="Center"  x:Name="LoginEntry" Grid.Row="1" Grid.RowSpan="2" Margin="0,110,0,0">
-                <Entry FontSize="12" Placeholder="přihlašovací jméno" HorizontalOptions="CenterAndExpand" WidthRequest="290" HeightRequest="50" BackgroundColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center"></Entry>
-                <Entry FontSize="12" Placeholder="heslo" HorizontalOptions="CenterAndExpand" BackgroundColor="White" WidthRequest="290" HeightRequest="50"  VerticalOptions="Center" HorizontalTextAlignment="Center"></Entry>
+            
+            <!-- Login entryes -->
+            <StackLayout VerticalOptions="Center"
+                         x:Name="LoginEntry"
+                         Grid.Row="1"
+                         Grid.RowSpan="2"
+                         Margin="0,110,0,0">
+                <Entry FontSize="12"
+                       Placeholder="přihlašovací jméno"
+                       HorizontalOptions="CenterAndExpand"
+                       WidthRequest="290"
+                       HeightRequest="50"
+                       BackgroundColor="White"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+              
+                <Entry FontSize="12"
+                       Placeholder="heslo"
+                       HorizontalOptions="CenterAndExpand"
+                       BackgroundColor="White"
+                       WidthRequest="290"
+                       HeightRequest="50"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="2" Grid.RowSpan="2">
-                <Button BackgroundColor="DeepPink" ImageSource="facebook.png" BorderRadius="15"  WidthRequest="70"   HeightRequest="50"  HorizontalOptions="Center"></Button>
-                <Button BackgroundColor="DeepPink" BorderRadius="15" TextColor="White" Text="Přihlásit" WidthRequest="150"   HeightRequest="50"  HorizontalOptions="Center"></Button>
-                <Button BackgroundColor="DeepPink" ImageSource="google.png" BorderRadius="15" WidthRequest="70"  HeightRequest="50" HorizontalOptions="Center" AllCaps="false"></Button>
+          
+            <!-- Login buttons -->
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="CenterAndExpand"
+                         VerticalOptions="Center"
+                         Grid.Row="2"
+                         Grid.RowSpan="2">
+                <Button BackgroundColor="DeepPink"
+                        ImageSource="facebook.png"
+                        BorderRadius="15"
+                        WidthRequest="70"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"/>
+              
+                <Button BackgroundColor="DeepPink"
+                        BorderRadius="15"
+                        TextColor="White"
+                        Text="Přihlásit"
+                        WidthRequest="150"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"/>
+              
+                <Button BackgroundColor="DeepPink"
+                        ImageSource="google.png"
+                        BorderRadius="15"
+                        WidthRequest="70"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>
