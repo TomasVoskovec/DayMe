@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DayMe.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,6 +12,7 @@ namespace DayMe
             InitializeComponent();
 
             MainPage = new MainPage();
+            
         }
 
         protected override void OnStart()
