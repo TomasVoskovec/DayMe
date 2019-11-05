@@ -2,8 +2,14 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             
+             android:TabbedPage.ToolbarPlacement="Bottom"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:DayMe.Views"
              mc:Ignorable="d"
              x:Class="DayMe.MainPage">
+
+    <local:CardPage IconImageSource="dayme_icon.png"></local:CardPage>
 
 </TabbedPage>

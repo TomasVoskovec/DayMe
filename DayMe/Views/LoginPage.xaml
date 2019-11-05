@@ -4,7 +4,6 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:custom="clr-namespace:DayMe"
-             xmlns:CustomEntry="clr-namespace:Plugin.RoundedBorderControls;assembly=Plugin.RoundedBorderControls"
              mc:Ignorable="d"
              x:Class="DayMe.Views.LoginPage" BackgroundImageSource="login_background.png">
     <ContentPage.Content>
