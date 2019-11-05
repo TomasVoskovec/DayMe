@@ -11,5 +11,4 @@
              x:Class="DayMe.MainPage">
 
     <local:CardPage IconImageSource="dayme_icon.png"></local:CardPage>
-
 </TabbedPage>
