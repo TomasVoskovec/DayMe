@@ -4,6 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:custom="clr-namespace:DayMe"
+             xmlns:shapes="clr-namespace:Stormlion.ShapeControl;assembly=Stormlion.ShapeControl"
+             xmlns:skiaSharp="clr-namespace:SkiaSharp;assembly=SkiaSharp"
              mc:Ignorable="d"
              x:Class="DayMe.Views.LoginPage" BackgroundImageSource="login_background.png">
     <ContentPage.Content>
@@ -18,43 +20,74 @@
                 <Image Source="dayme_logo.png" HorizontalOptions="CenterAndExpand"  HeightRequest="140"></Image>
                 <Label Text="DAYME" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="25" TextColor="White"></Label>
             </StackLayout>
+          
+            <!-- Login entryes background -->
+            <StackLayout VerticalOptions="Center"
+                         Grid.Row="1"
+                         Grid.RowSpan="2"
+                         Margin="50,95,50,0">
+
+              <shapes:RoundRect x:Name="LoginEntryBackground"
+                                RadiusX="15"
+                                RadiusY="15"
+                                Margin="0,0,0,0"
+                                HeightRequest="50"
+                                VerticalOptions="Center">
+                <shapes:RoundRect.Paint>
+                  <shapes:SSPaint FillColor="White"/>
+                </shapes:RoundRect.Paint>
+              </shapes:RoundRect>
+            
+              <shapes:RoundRect x:Name="PasswordEntryBackground"
+                                RadiusX="15"
+                                RadiusY="15"
+                                Margin="0,0,0,0"
+                                HeightRequest="50"
+                                VerticalOptions="Center">
+                <shapes:RoundRect.Paint>
+                  <shapes:SSPaint FillColor="White"/>
+                </shapes:RoundRect.Paint>
+              </shapes:RoundRect>        
+          
+            </StackLayout>
             
             <!-- Login entryes -->
             <StackLayout VerticalOptions="Center"
-                         x:Name="LoginEntry"
+                         x:Name="LoginEntryes"
                          Grid.Row="1"
                          Grid.RowSpan="2"
-                         Margin="0,110,0,0">
-                <Entry FontSize="12"
-                       Placeholder="přihlašovací jméno"
-                       HorizontalOptions="CenterAndExpand"
-                       WidthRequest="290"
-                       HeightRequest="50"
-                       BackgroundColor="White"
-                       VerticalOptions="Center"
-                       HorizontalTextAlignment="Center"/>
+                         Margin="50,110,50,0">
+                <shapes:SSEntry FontSize="12"
+                                Placeholder="Přihlašovací jméno"
+                                HorizontalOptions="CenterAndExpand"
+                                HeightRequest="50"
+                                BackgroundColor="Transparent"
+                                VerticalOptions="Center"
+                                HorizontalTextAlignment="Center"/>
               
-                <Entry FontSize="12"
-                       Placeholder="heslo"
-                       HorizontalOptions="CenterAndExpand"
-                       BackgroundColor="White"
-                       WidthRequest="290"
-                       HeightRequest="50"
-                       VerticalOptions="Center"
-                       HorizontalTextAlignment="Center"/>
+                <shapes:SSEntry FontSize="12"
+                                IsPassword="True"
+                                Placeholder="Heslo"
+                                HorizontalOptions="CenterAndExpand"
+                                BackgroundColor="Transparent"
+                                HeightRequest="50"
+                                VerticalOptions="Center"
+                                HorizontalTextAlignment="Center"/>
             </StackLayout>
+          
             <!-- Login buttons -->
             <StackLayout Orientation="Horizontal"
                          HorizontalOptions="CenterAndExpand"
                          VerticalOptions="Center"
                          Grid.Row="2"
-                         Grid.RowSpan="2">
+                         Grid.RowSpan="2"
+                         Margin="50,0">
                 <Button BackgroundColor="DeepPink"
                         ImageSource="facebook.png"
                         BorderRadius="15"
-                        WidthRequest="70"
+                        WidthRequest="75"
                         HeightRequest="50"
-                        HorizontalOptions="Center"/>
+                        HorizontalOptions="Start"/>
               
                 <Button BackgroundColor="DeepPink"
                         BorderRadius="15"
@@ -67,9 +100,9 @@
                 <Button BackgroundColor="DeepPink"
                         ImageSource="google.png"
                         BorderRadius="15"
-                        WidthRequest="70"
+                        WidthRequest="75"
                         HeightRequest="50"
-                        HorizontalOptions="Center"/>
+                        HorizontalOptions="End"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>
