@@ -12,4 +12,5 @@
 
     <local:CardPage IconImageSource="dayme_icon.png"></local:CardPage>
     <local:LoginPage Title="Login"></local:LoginPage>
+    <local:ProfilePage Title="ProfilePage"></local:ProfilePage>
 </TabbedPage>

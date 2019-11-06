@@ -3,10 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DayMe.Views.ProfilePage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid IsVisible="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="7*"/>
+            </Grid.RowDefinitions>
+            <Label BackgroundColor="Red" Grid.Row="0"></Label>
+            <Label BackgroundColor="Green"  Grid.Row="1"></Label>
+            <Label BackgroundColor="Blue" Grid.Row="2"></Label>
+            <Label BackgroundColor="Black"  Grid.Row="3"></Label>
+            <Label BackgroundColor="Orange"  Grid.Row="4"></Label>
+            <Label BackgroundColor="Pink"  Grid.Row="5"></Label>
+            <ScrollView Grid.Row="5"></ScrollView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
