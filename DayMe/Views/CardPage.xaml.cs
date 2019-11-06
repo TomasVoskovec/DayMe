@@ -16,5 +16,10 @@ namespace DayMe.Views
         {
             InitializeComponent();
         }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("FUK", "BY", "Balls");
+        }
     }
 }
