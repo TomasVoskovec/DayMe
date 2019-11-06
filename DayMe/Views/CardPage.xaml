@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DayMe.Views.CardPage" BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Button Grid.Row="0" Grid.Column="0"   Margin="40,0,0,0"  HorizontalOptions="Start" ImageSource="settings_icon50x50"  BackgroundColor="Transparent" BorderColor="Transparent"  WidthRequest="50" HeightRequest="50"  ></Button>
+            <Button Grid.Row="0" Grid.Column="2"  Margin="0,0,40,0"  HorizontalOptions="End" ImageSource="chat_icon55x50"  BackgroundColor="Transparent" BorderColor="Transparent"  WidthRequest="50" HeightRequest="50"  ></Button>
+            
+            <Image Grid.Column="1" Grid.Row="1" Source="preview_woman.png" Aspect="AspectFill"  ></Image>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
