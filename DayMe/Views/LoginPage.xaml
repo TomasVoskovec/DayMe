@@ -14,6 +14,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
           
             <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="0" Grid.RowSpan="2" >
@@ -76,34 +77,46 @@
             </StackLayout>
           
             <!-- Login buttons -->
-            <StackLayout Orientation="Horizontal"
+            <StackLayout Orientation="Vertical"
                          HorizontalOptions="CenterAndExpand"
                          VerticalOptions="Center"
                          Grid.Row="2"
-                         Grid.RowSpan="2"
-                         Margin="50,0">
-                <Button BackgroundColor="DeepPink"
-                        ImageSource="facebook.png"
+
+                         Grid.RowSpan="2">
+                <StackLayout Orientation="Horizontal">
+                    <Button BackgroundColor="#d92065"
+                        ImageSource="facebook_small.png"
+
+                     
                         BorderRadius="15"
                         WidthRequest="75"
                         HeightRequest="50"
+
                         HorizontalOptions="Start"/>
-              
-                <Button BackgroundColor="DeepPink"
+
+                    <Button BackgroundColor="#d92065"
+
+
                         BorderRadius="15"
                         TextColor="White"
                         Text="Přihlásit"
                         WidthRequest="150"
                         HeightRequest="50"
                         HorizontalOptions="Center"/>
-              
-                <Button BackgroundColor="DeepPink"
-                        ImageSource="google.png"
+
+                    <Button BackgroundColor="#d92065"
+                        ImageSource="google_small.png"
                         BorderRadius="15"
                         WidthRequest="75"
                         HeightRequest="50"
-                        HorizontalOptions="End"/>
+
+                        HorizontalOptions="Center"/>
+                </StackLayout>
+                <Button Text="registrace" Grid.Row="2" BackgroundColor="Transparent" BorderColor="Transparent" VerticalOptions="CenterAndExpand" TextColor="White"></Button>
+
             </StackLayout>
+            <Label Text="version 1.0" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="3" TextColor="White"></Label>
+            
         </Grid>
     </ContentPage.Content>
 </ContentPage>
