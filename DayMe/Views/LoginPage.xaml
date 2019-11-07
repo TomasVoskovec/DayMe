@@ -18,7 +18,7 @@
             </Grid.RowDefinitions>
           
             <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="0" Grid.RowSpan="2" >
-                <Image Source="dayme_logo.png" HorizontalOptions="CenterAndExpand"  HeightRequest="140"></Image>
+                <Image Source="dayme_logo.png" Opacity="0.7" HorizontalOptions="CenterAndExpand"  HeightRequest="140"></Image>
                 <Label Text="DAYME" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="25" TextColor="White"></Label>
             </StackLayout>
           
@@ -115,7 +115,7 @@
                 <Button Text="registrace" Grid.Row="2" BackgroundColor="Transparent" BorderColor="Transparent" VerticalOptions="CenterAndExpand" TextColor="White"></Button>
 
             </StackLayout>
-            <Label Text="version 1.0" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="3" TextColor="White"></Label>
+            <Label Text="ver 1.0.2" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="3" TextColor="White"></Label>
             
         </Grid>
     </ContentPage.Content>
