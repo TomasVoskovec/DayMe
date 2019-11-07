@@ -11,7 +11,7 @@ namespace DayMe
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LoginPage();
             
         }
 
