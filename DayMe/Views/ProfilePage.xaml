@@ -20,9 +20,8 @@
             </Grid.ColumnDefinitions>
             
             
-            <Label BackgroundColor="Black"  Grid.Row="3" Grid.Column="1"></Label>
-            <Label BackgroundColor="Orange"  Grid.Row="4" Grid.Column="1"></Label>
-            <Label BackgroundColor="Pink"  Grid.Row="5" Grid.Column="1"></Label>
+            
+           <Label BackgroundColor="Pink"  Grid.Row="5" Grid.Column="1"></Label>
 
             <!-- Everywhere icons -->
             <Button Clicked="Button_Clicked" Grid.Row="0" Grid.Column="0"    HorizontalOptions="End" ImageSource="settings_icon50x50"  BackgroundColor="Transparent" BorderColor="Transparent"  WidthRequest="50" HeightRequest="50"  ></Button>
@@ -32,8 +31,51 @@
             <Label  Grid.Row="1" Grid.Column="1" Text="DayMe DayMe" HorizontalOptions="CenterAndExpand" FontSize="17" TextColor="#bd2359"/>
 
             <!-- Profile picture -->
-            <!--Label  BackgroundColor="Blue" Grid.Row="2" Grid.Column="1"/ {Binding Height, Source={x:Reference ProfilePicture}} -->
-            <Image x:Name="ProfilePicture" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="50" Grid.Column="1" Grid.Row="2" Source="preview_woman.png" />
+            <Image x:Name="ProfilePicture" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" WidthRequest="{Binding Height, Source={x:Reference ProfilePicture}}"  Grid.Row="2" Grid.Column="1" Source="preview_woman.png">
+                <!--  Grid.Column="1" Grid.Row="2"   /-->
+            </Image>
+                
+            <!-- Hodnoceni -->
+            <Grid Grid.Row="3" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image x:Name="LikenesIcon1" Grid.Column="0" HeightRequest="{Binding Width, Source={x:Reference LikenesIcon1}}"  Source="dayme_icon.png"/>
+                <Image x:Name="LikenesIcon2" Grid.Column="1"  HeightRequest="{Binding Width, Source={x:Reference LikenesIcon2}}"  Source="dayme_icon.png"/>
+                <Image x:Name="LikenesIcon3" Grid.Column="2"  HeightRequest="{Binding Width, Source={x:Reference LikenesIcon3}}"  Source="dayme_icon.png"/>
+                <Image x:Name="LikenesIcon4" Grid.Column="3" HeightRequest="{Binding Width, Source={x:Reference LikenesIcon4}}"  Source="dayme_icon.png"/>
+                <Image x:Name="LikenesIcon5" Grid.Column="4" HeightRequest="{Binding Width, Source={x:Reference LikenesIcon5}}"  Source="dayme_icon.png"/>
+            </Grid>
+            
+            <!-- Rank -->
+            <Grid Grid.Row="4" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" WidthRequest="{Binding Height, Source={x:Reference RankIcon1}} * 5 + 5}}" HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image x:Name="RankIcon1" Grid.Column="0" WidthRequest="{Binding Height, Source={x:Reference RankIcon1}}"  Source="dayme_icon.png"/>
+                    <Image x:Name="RankIcon2" Grid.Column="1"  WidthRequest="{Binding Height, Source={x:Reference RankIcon2}}"  Source="dayme_icon.png"/>
+                    <Image x:Name="RankIcon3" Grid.Column="2"  WidthRequest="{Binding Height, Source={x:Reference RankIcon3}}"  Source="dayme_icon.png"/>
+                    <Image x:Name="RankIcon4" Grid.Column="3" WidthRequest="{Binding Height, Source={x:Reference RankIcon4}}"  Source="dayme_icon.png"/>
+                    <Image x:Name="RankIcon5" Grid.Column="4" WidthRequest="{Binding Height, Source={x:Reference RankIcon5}}"  Source="dayme_icon.png"/>
+                </Grid>
+                <Label  Grid.Row="1" Text="Rank XXX" HorizontalOptions="CenterAndExpand" FontSize="12" TextColor="#bd2359"/>
+            </Grid>
 
             <!-- Okno se seznmamem informací o uživateli profilu -->
             <ScrollView Grid.Row="5"></ScrollView>
