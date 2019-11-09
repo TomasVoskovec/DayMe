@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Jan "Anti Crafty" Novák | v1.3-->    
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DayMe.Views.ProfilePage">
@@ -7,17 +8,34 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="1*"/>
-                <RowDefinition Height="5*"/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="2*"/>
                 <RowDefinition Height="7*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="8*"/>
             </Grid.RowDefinitions>
-            <Label BackgroundColor="Red" Grid.Row="0"></Label>
-            <Label BackgroundColor="Green"  Grid.Row="1"></Label>
-            <Label BackgroundColor="Blue" Grid.Row="2"></Label>
-            <Label BackgroundColor="Black"  Grid.Row="3"></Label>
-            <Label BackgroundColor="Orange"  Grid.Row="4"></Label>
-            <Label BackgroundColor="Pink"  Grid.Row="5"></Label>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            
+            <Label BackgroundColor="Black"  Grid.Row="3" Grid.Column="1"></Label>
+            <Label BackgroundColor="Orange"  Grid.Row="4" Grid.Column="1"></Label>
+            <Label BackgroundColor="Pink"  Grid.Row="5" Grid.Column="1"></Label>
+
+            <!-- Everywhere icons -->
+            <Button Clicked="Button_Clicked" Grid.Row="0" Grid.Column="0"    HorizontalOptions="End" ImageSource="settings_icon50x50"  BackgroundColor="Transparent" BorderColor="Transparent"  WidthRequest="50" HeightRequest="50"  ></Button>
+            <Button Clicked="Button_Clicked" Grid.Row="0" Grid.Column="2"    HorizontalOptions="Start" ImageSource="chat_icon55x50"  BackgroundColor="Transparent" BorderColor="Transparent"  WidthRequest="50" HeightRequest="50"  ></Button>
+
+            <!-- Profile name -->
+            <Label  Grid.Row="1" Grid.Column="1" Text="DayMe DayMe" HorizontalOptions="CenterAndExpand" FontSize="17" TextColor="#bd2359"/>
+
+            <!-- Profile picture -->
+            <!--Label  BackgroundColor="Blue" Grid.Row="2" Grid.Column="1"/ {Binding Height, Source={x:Reference ProfilePicture}} -->
+            <Image x:Name="ProfilePicture" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="50" Grid.Column="1" Grid.Row="2" Source="preview_woman.png" />
+
+            <!-- Okno se seznmamem informací o uživateli profilu -->
             <ScrollView Grid.Row="5"></ScrollView>
         </Grid>
     </ContentPage.Content>
