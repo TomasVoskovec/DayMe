@@ -31,10 +31,12 @@
             <Label  Grid.Row="1" Grid.Column="1" Text="DayMe DayMe" HorizontalOptions="CenterAndExpand" FontSize="17" TextColor="#bd2359"/>
 
             <!-- Profile picture -->
-            <Image x:Name="ProfilePicture" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" WidthRequest="{Binding Height, Source={x:Reference ProfilePicture}}"  Grid.Row="2" Grid.Column="1" Source="preview_woman.png">
-                <!--  Grid.Column="1" Grid.Row="2"   /-->
+            <Frame x:Name="ProfilePicture" HorizontalOptions="CenterAndExpand"   CornerRadius="{Binding Height, Source={x:Reference ProfilePicture}}" VerticalOptions="Fill"  WidthRequest="{Binding Height, Source={x:Reference ProfilePicture}}" IsClippedToBounds="True" Grid.Row="2" Grid.Column="1" Padding="0">
+            <Image   Source="preview_woman.png"  >
+                    <!--  Grid.Column="1" Grid.Row="2"   /-->
             </Image>
-                
+            </Frame>
+
             <!-- Hodnoceni -->
             <Grid Grid.Row="3" Grid.Column="1">
                 <Grid.ColumnDefinitions>
