@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!-- Jan "Anti Crafty" Novák | v1.3-->    
+<!-- Jan "Anti Crafty" Novák | v1.6-->    
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DayMe.Views.ProfilePage">
@@ -19,9 +19,6 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             
-            
-            
-           <Label BackgroundColor="Pink"  Grid.Row="5" Grid.Column="1"></Label>
 
             <!-- Everywhere icons -->
             <Button Clicked="Button_Clicked" Grid.Row="0" Grid.Column="0"    HorizontalOptions="End" ImageSource="settings_icon50x50"  BackgroundColor="Transparent" BorderColor="Transparent"  WidthRequest="50" HeightRequest="50"  ></Button>
@@ -80,7 +77,24 @@
             </Grid>
 
             <!-- Okno se seznmamem informací o uživateli profilu -->
-            <ScrollView Grid.Row="5"></ScrollView>
+            <ScrollView Grid.Row="5" Grid.Column="1">
+                <StackLayout>
+                    <Frame >
+                        <Label HorizontalOptions="CenterAndExpand" FontSize="17"  Text="Uživatelske jmeno"></Label>
+                    </Frame>
+                    <Frame><Label HorizontalOptions="CenterAndExpand" FontSize="17" Text="E-mail"></Label></Frame>
+                    <Frame>
+                        <Label HorizontalOptions="CenterAndExpand" FontSize="17" Text="Mobiní číslo"></Label>
+                    </Frame>
+                    <Frame>
+                        <Label HorizontalOptions="CenterAndExpand" FontSize="17" Text="Pohlaví"></Label>
+                    </Frame>
+                    <Frame>
+                        <Label HorizontalOptions="CenterAndExpand" FontSize="17" Text="Mám zájem o"></Label>
+                    </Frame>
+
+                </StackLayout>
+            </ScrollView>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
