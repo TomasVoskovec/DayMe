@@ -11,6 +11,7 @@
              x:Class="DayMe.MainPage">
 
     <local:CardPage IconImageSource="dayme_icon.png"></local:CardPage>
+    <local:RegistrationPage Title="RegistrationPage"></local:RegistrationPage>
     <local:LoginPage Title="Login"></local:LoginPage>
     <local:ProfilePage Title="ProfilePage"></local:ProfilePage>
 </TabbedPage>
