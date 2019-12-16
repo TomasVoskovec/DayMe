@@ -3,33 +3,237 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:shapes="clr-namespace:Stormlion.ShapeControl;assembly=Stormlion.ShapeControl"
              mc:Ignorable="d"
-             x:Class="DayMe.Views.RegistrationPage">
+             x:Class="DayMe.Views.RegistrationPage" BackgroundImageSource="login_background.png">
     <ContentPage.Content>
-        <StackLayout>
-            <Entry x:Name="Name"
-                   Placeholder="Name*"/>
-            <Entry x:Name="Email"
-                   Keyboard="Email"
-                   Placeholder="Email*"/>
-            <Entry x:Name="Password"
-                   IsPassword="True"
-                   Placeholder="Password*"/>
-            <Entry x:Name="PasswordCorrection"
-                   IsPassword="True"
-                   Placeholder="Repeat your password*"/>
-            <Entry x:Name="Description"
-                   Placeholder="Popisek"/>
-            <Entry x:Name="Age"
-                   Placeholder="Age"/>
-            <Picker x:Name="Gender"/>
-            <Picker x:Name="Sexualities"/>
-            <Entry x:Name="Phone"
-                   Keyboard="Numeric"
-                   Placeholder="Phone number"/>
-            <Button x:Name="Register"
-                    Text="Register"
-                    Clicked="Register_Clicked"/>
-        </StackLayout>
+        
+            <Grid>
+                <Grid.RowDefinitions>
+
+
+                   
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+
+                <!-- Register entries background -->
+                
+                <StackLayout VerticalOptions="Start"
+                         Grid.Row="1"
+                         Grid.RowSpan="5"
+                         Margin="50,0,50,0">
+
+                    <shapes:RoundRect x:Name="NameEntryBackground"
+                                RadiusX="15"
+                                RadiusY="15"
+                                Margin="0,0,0,0"
+                                HeightRequest="50"
+                                VerticalOptions="Center">
+                        <shapes:RoundRect.Paint>
+                            <shapes:SSPaint FillColor="White"/>
+                        </shapes:RoundRect.Paint>
+                    </shapes:RoundRect>
+
+                    <shapes:RoundRect x:Name="EmailEntryBackground"
+                                RadiusX="15"
+                                RadiusY="15"
+                                Margin="0,0,0,0"
+                                HeightRequest="50"
+                                VerticalOptions="Center">
+                        <shapes:RoundRect.Paint>
+                            <shapes:SSPaint FillColor="White"/>
+                        </shapes:RoundRect.Paint>
+                    </shapes:RoundRect>
+
+                    <shapes:RoundRect x:Name="PasswordEntryBackground"
+                                RadiusX="15"
+                                RadiusY="15"
+                                Margin="0,0,0,0"
+                                HeightRequest="50"
+                                VerticalOptions="Center">
+                        <shapes:RoundRect.Paint>
+                            <shapes:SSPaint FillColor="White"/>
+                        </shapes:RoundRect.Paint>
+                    </shapes:RoundRect>
+
+                    <shapes:RoundRect x:Name="Password2EntryBackground"
+                                RadiusX="15"
+                                RadiusY="15"
+                                Margin="0,0,0,0"
+                                HeightRequest="50"
+                                VerticalOptions="Center">
+                        <shapes:RoundRect.Paint>
+                            <shapes:SSPaint FillColor="White"/>
+                        </shapes:RoundRect.Paint>
+                    </shapes:RoundRect>
+
+                    <shapes:RoundRect x:Name="DescriptionEntryBackground"
+                                RadiusX="15"
+                                RadiusY="15"
+                                Margin="0,0,0,0"
+                                HeightRequest="50"
+                                VerticalOptions="Center">
+                        <shapes:RoundRect.Paint>
+                            <shapes:SSPaint FillColor="White"/>
+                        </shapes:RoundRect.Paint>
+                    </shapes:RoundRect>
+
+                <shapes:RoundRect x:Name="AgeEntryBackground"
+                                RadiusX="15"
+                                RadiusY="15"
+                                Margin="0,0,0,0"
+                                HeightRequest="50"
+                                VerticalOptions="Center">
+                    <shapes:RoundRect.Paint>
+                        <shapes:SSPaint FillColor="White"/>
+                    </shapes:RoundRect.Paint>
+                </shapes:RoundRect>
+
+                <shapes:RoundRect x:Name="PhoneEntryBackground"
+                                RadiusX="15"
+                                RadiusY="15"
+                                Margin="0,0,0,0"
+                                HeightRequest="50"
+                                VerticalOptions="Center">
+                    <shapes:RoundRect.Paint>
+                        <shapes:SSPaint FillColor="White"/>
+                    </shapes:RoundRect.Paint>
+                </shapes:RoundRect>
+
+                <shapes:RoundRect x:Name="GenderEntryBackground"
+                                RadiusX="15"
+                                RadiusY="15"
+                                Margin="0,0,0,0"
+                                HeightRequest="50"
+                                VerticalOptions="Center">
+                    <shapes:RoundRect.Paint>
+                        <shapes:SSPaint FillColor="White"/>
+                    </shapes:RoundRect.Paint>
+                </shapes:RoundRect>
+
+                <shapes:RoundRect x:Name="SexEntryBackground"
+                                RadiusX="15"
+                                RadiusY="15"
+                                Margin="0,0,0,0"
+                                HeightRequest="50"
+                                VerticalOptions="Center">
+                    <shapes:RoundRect.Paint>
+                        <shapes:SSPaint FillColor="White"/>
+                    </shapes:RoundRect.Paint>
+                </shapes:RoundRect>
+
+            </StackLayout>
+
+                <!-- Register entries -->
+
+                <StackLayout VerticalOptions="Start"
+                         x:Name="RegisterEntries"
+                         Grid.Row="1"
+                         Grid.RowSpan="5"
+                         Margin="50,0,50,0">
+
+                    <shapes:SSEntry FontSize="12"
+                                Placeholder="Jméno"
+                                x:Name="Name"
+                                HorizontalOptions="CenterAndExpand"
+                                HeightRequest="50"
+                                BackgroundColor="Transparent"
+                                VerticalOptions="Center"
+                                HorizontalTextAlignment="Center"/>
+                    
+                    <shapes:SSEntry FontSize="12"
+                                Placeholder="Email"
+                                x:Name="Email"
+                                HorizontalOptions="CenterAndExpand"
+                                HeightRequest="50"
+                                Keyboard="Email"
+                                BackgroundColor="Transparent"
+                                VerticalOptions="Center"
+                                HorizontalTextAlignment="Center"/>
+                    
+                    <shapes:SSEntry FontSize="12"
+                                Placeholder="Heslo"
+                                x:Name="Password"
+                                IsPassword="True"
+                                HorizontalOptions="CenterAndExpand"
+                                HeightRequest="50"
+                                BackgroundColor="Transparent"
+                                VerticalOptions="Center"
+                                HorizontalTextAlignment="Center"/>
+
+                    <shapes:SSEntry FontSize="12"
+                                Placeholder="Heslo znovu"
+                                x:Name="PasswordAgain"
+                                IsPassword="True"
+                                HorizontalOptions="CenterAndExpand"
+                                HeightRequest="50"
+                                BackgroundColor="Transparent"
+                                VerticalOptions="Center"
+                                HorizontalTextAlignment="Center"/>
+
+                    <shapes:SSEntry FontSize="12"
+                                Placeholder="Popisek"
+                                x:Name="Description"      
+                                HorizontalOptions="CenterAndExpand"
+                                HeightRequest="50"
+                                BackgroundColor="Transparent"
+                                VerticalOptions="Center"
+                                HorizontalTextAlignment="Center"/>
+
+                    <shapes:SSEntry FontSize="12"
+                                Placeholder="Věk"
+                                x:Name="Age"                   
+                                HorizontalOptions="CenterAndExpand"
+                                HeightRequest="50"
+                                BackgroundColor="Transparent"
+                                VerticalOptions="Center"
+                                HorizontalTextAlignment="Center"/>
+
+                    
+                    
+                <shapes:SSEntry FontSize="12"
+                                Placeholder="Telefonní číslo"
+                                x:Name="Phone"                   
+                                HorizontalOptions="CenterAndExpand"
+                                HeightRequest="50"
+                                Keyboard="Numeric"
+                                BackgroundColor="Transparent"
+                                VerticalOptions="Center"
+                                HorizontalTextAlignment="Center"/>
+
+                <shapes:SSPicker FontSize="12"
+                                x:Name="Gender"                   
+                                HorizontalOptions="CenterAndExpand"
+                                HeightRequest="50"
+                                Title="Gender"
+                                BackgroundColor="Transparent"
+                                VerticalOptions="Center"
+                                />
+
+                <shapes:SSPicker FontSize="12"
+                                x:Name="Sexualities"                   
+                                HorizontalOptions="CenterAndExpand"
+                                HeightRequest="50"
+                                Title="Sexuality"
+                                BackgroundColor="Transparent"
+                                VerticalOptions="Center"
+                                />
+
+
+                <Button BackgroundColor="#d92065"
+
+                        x:Name="Register"
+                        BorderRadius="15"
+                        TextColor="White"
+                        Text="Registrovat"
+                        WidthRequest="150"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"/>
+                
+                
+                </StackLayout>
+            </Grid>
+       
     </ContentPage.Content>
 </ContentPage>

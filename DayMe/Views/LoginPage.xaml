@@ -22,7 +22,7 @@
                 <Label Text="DAYME" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="25" TextColor="White"></Label>
             </StackLayout>
           
-            <!-- Login entryes background -->
+            <!-- Login entries background -->
             <StackLayout VerticalOptions="Center"
                          Grid.Row="1"
                          Grid.RowSpan="2"
@@ -52,9 +52,9 @@
           
             </StackLayout>
             
-            <!-- Login entryes -->
+            <!-- Login entries -->
             <StackLayout VerticalOptions="Center"
-                         x:Name="LoginEntryes"
+                         x:Name="LoginEntries"
                          Grid.Row="1"
                          Grid.RowSpan="2"
                          Margin="50,110,50,0">
