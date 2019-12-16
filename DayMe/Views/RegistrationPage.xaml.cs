@@ -31,7 +31,7 @@ namespace DayMe.Views
             {
                 { "Male", 0 },
                 { "Female", 1 },
-                { "Bisexual", 2 }
+                
             };
 
             foreach (string gender in genders.Keys)
